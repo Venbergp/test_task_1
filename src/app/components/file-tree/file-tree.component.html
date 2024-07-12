@@ -1,0 +1,3 @@
+<ng-container *ngIf="filesTree | async as tree">
+  <app-folder [folder]="tree" [expandedPaths]="expandedPaths"></app-folder>
+</ng-container>

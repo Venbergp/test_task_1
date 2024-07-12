@@ -1,0 +1,17 @@
+<div class="folder" [ngClass]="{'folder--empty': isEmpty(folder)}">
+  <div class="folder__name" (click)="toggle()" [ngClass]="{'folder__name--disabled': isEmpty(folder)}">
+    <img src="123.png" class="folder__icon" alt="">
+    {{ folder.name }}
+  </div>
+  <div class="" *ngIf="isOpen || folder.found">
+    <div class="folder__files folder__content" *ngIf="folder.files?.length">
+      <div *ngFor="let file of folder.files" (click)="selectFile(file)">
+        <img src="file.png" class="file__icon" alt="File Icon">
+        {{ file.name }}
+      </div>
+    </div>
+    <div class="folder__folders" *ngIf="folder.folders?.length">
+      <app-folder *ngFor="let subFolder of folder.folders" [folder]="subFolder" [expandedPaths]="expandedPaths.slice(1)"></app-folder>
+    </div>
+  </div>
+</div>

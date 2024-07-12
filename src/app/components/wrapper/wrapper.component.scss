@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000080;
+  color: #ffffff;
+  font-family: monospace;
+
+  &__search {
+    padding: 1rem;
+    border-bottom: 1px solid #87CEEB;
+    background-color: #1E90FF;
+    color: #ffffff;
+  }
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    background-color: #000080;
+    color: #87CEEB;
+  }
+
+  &__file-tree, &__file-view {
+    width: 50%;
+    background-color: #000080;
+    color: #87CEEB;
+    border: 1px solid #87CEEB;
+    padding: 1rem;
+  }
+
+  &__file-tree {
+    border-right: 1px solid #87CEEB;
+  }
+
+  &__file-view {
+    background-color: #1E90FF;
+  }
+}

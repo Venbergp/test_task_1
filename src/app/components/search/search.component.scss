@@ -1,0 +1,22 @@
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #000080;
+  border: 1px solid #87CEEB;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: #87CEEB;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #00BFFF;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+  }
+}
